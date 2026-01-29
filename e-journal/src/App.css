@@ -1,42 +1,113 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.home {
+  min-height: 100vh;
+  padding: 2.5rem 4rem;
+  background-color: var(--bg);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-size: 0.95rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.home-logo {
+  font-family: 'Darumadrop One', system-ui, cursive;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+}
+
+.home-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.home-nav-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.home-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding-top: 3rem;
+}
+
+.home-illustration {
+  width: 260px;
+  height: auto;
+  display: block;
+}
+
+.home-hero-title {
+  font-family: 'Darumadrop One', system-ui, cursive;
+  font-size: 4rem;
+  line-height: 1.25;
+  margin: 0 0 1.8rem;
+}
+
+.home-hero-title-line {
+  display: inline-block;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--text-main);
+  text-underline-offset: 6px;
+}
+
+.home-hero-title-line + .home-hero-title-line {
+  margin-top: 0.25rem;
+}
+
+.home-hero-cta {
+  padding: 0.85rem 2.8rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--accent);
+  color: #f7f4f1;
+  font-family: 'Darumadrop One', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1.75rem;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    background-color 0.12s ease-out;
+}
+
+.home-hero-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+  background-color: #5a413d;
+}
+
+.home-hero-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  .home {
+    padding: 1.8rem 1.6rem 2.4rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .home-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .home-illustration {
+    align-self: center;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
