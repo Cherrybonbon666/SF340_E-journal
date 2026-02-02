@@ -6,7 +6,7 @@
 
   /* Existing tokens mapped onto theme colors */
   --bg: var(--theme-color-1);
-  --text-main: #22181a;
+  --text-main: var(--theme-color-2); /* bind main text color to theme */
   --accent: var(--theme-color-2);
 }
 
