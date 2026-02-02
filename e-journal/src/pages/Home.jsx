@@ -1,8 +1,15 @@
+import { useNavigate } from 'react-router-dom'
 import Icon from '../assets/Icon.svg'
 
 function Home() {
+  const navigate = useNavigate()
+
+  const goToCalendar = () => {
+    navigate('/calendar')
+  }
+
   return (
-    <>
+    <div className="home">
       <header className="home-header">
         <div className="home-logo">ejournal</div>
         <nav className="home-nav">
@@ -24,12 +31,12 @@ function Home() {
             <br />
             <span className="home-hero-title-line">one page at a time</span>
           </h1>
-          <button type="button" className="home-hero-cta">
+          <button type="button" className="home-hero-cta" onClick={goToCalendar}>
             Let Started
           </button>
         </section>
       </main>
-    </>
+    </div>
   )
 }
 

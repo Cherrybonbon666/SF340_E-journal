@@ -1,7 +1,13 @@
 :root {
-  --bg: #f3f0ea;
+  /* Global themable colors */
+  --theme-color-1: #f3f0ea; 
+  --theme-color-2: #4c3734; 
+  --theme-color-3: #6e5a5a; 
+
+  /* Existing tokens mapped onto theme colors */
+  --bg: var(--theme-color-1);
   --text-main: #22181a;
-  --accent: #4c3734;
+  --accent: var(--theme-color-2);
 }
 
 *,
