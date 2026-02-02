@@ -13,6 +13,10 @@ function Home() {
     navigate('/login')
   }
 
+  const goToCalendar = () => {
+    navigate('/calendar')
+  }
+
   return (
     <div className="home">
       <header className="home-header">
@@ -36,7 +40,7 @@ function Home() {
             <br />
             <span className="home-hero-title-line">one page at a time</span>
           </h1>
-          <button type="button" className="home-hero-cta" onClick={goToLogin}>
+          <button type="button" className="home-hero-cta" onClick={goToCalendar}>
             Let Started
           </button>
         </section>
