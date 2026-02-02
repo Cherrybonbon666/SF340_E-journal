@@ -1,15 +1,27 @@
+import { useNavigate } from 'react-router-dom'
 import Icon from '../assets/Icon.svg'
+import '../styles/Home.css'
 
 function Home() {
+  const navigate = useNavigate()
+
+  const goToSignup = () => {
+    navigate('/signup')
+  }
+
+  const goToLogin = () => {
+    navigate('/login')
+  }
+
   return (
-    <>
+    <div className="home">
       <header className="home-header">
         <div className="home-logo">ejournal</div>
         <nav className="home-nav">
-          <button type="button" className="home-nav-link">
+          <button type="button" className="home-nav-link" onClick={goToSignup}>
             sign up
           </button>
-          <button type="button" className="home-nav-link">
+          <button type="button" className="home-nav-link" onClick={goToLogin}>
             log in
           </button>
         </nav>
@@ -24,12 +36,12 @@ function Home() {
             <br />
             <span className="home-hero-title-line">one page at a time</span>
           </h1>
-          <button type="button" className="home-hero-cta">
+          <button type="button" className="home-hero-cta" onClick={goToLogin}>
             Let Started
           </button>
         </section>
       </main>
-    </>
+    </div>
   )
 }
 
