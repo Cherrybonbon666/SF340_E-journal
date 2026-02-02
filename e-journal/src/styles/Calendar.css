@@ -387,3 +387,8 @@
 .calendar-search-input::placeholder {
   color: #d0d0d0;
 }
+
+.calendar-bottom-spacer {
+  height: 4rem; /* add space below the calendar grid so it doesn't touch the bottom */
+  width: 100%;
+}

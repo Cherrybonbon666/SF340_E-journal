@@ -313,6 +313,7 @@ function Calendar() {
         </div>
       ))}
       </div>
+      <div className="calendar-bottom-spacer" aria-hidden="true" />
     </div>
   )
 }
